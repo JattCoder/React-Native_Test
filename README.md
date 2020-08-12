@@ -39,3 +39,4 @@
 - Display the information as `Service Key: {service_key}`.
 - Additionally, assume the existing key is a Development key:
   - Make it so this key is only used in the `Debug` build configurations, and use `le475jUm1D` as the Production key on `Release` builds.
+# React-Native_Test
