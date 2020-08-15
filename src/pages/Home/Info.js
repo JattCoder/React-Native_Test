@@ -5,11 +5,9 @@ const Info = () => {
   const[screen1,setscreen1] = useState(true)
   const[screen2,setscreen2] = useState(false)
   const[screen3,setscreen3] = useState(false)
-  const[sonefade,setonefade] = useState(1)
-  const[timer,resettimer] = useState(2000)
-
+  let timer = 2000
   let scaleValue = new Animated.Value(0);
-  let fadeValue = new Animated.Value(1)
+  let splitline = new Animated.Value(300)
   const textScale = scaleValue.interpolate({
       inputRange: [0, 0.5, 1],
       outputRange: [1, 1.1, 1.2]
@@ -27,7 +25,6 @@ const Info = () => {
       setTimeout(()=>{
         setscreen1(false)
         setscreen2(true)
-        resettimer(2000)
       },350)
     }else if(screen2 == true){
       Animated.timing(scaleValue, {
@@ -39,7 +36,6 @@ const Info = () => {
       setTimeout(()=>{
         setscreen2(false)
         setscreen3(true)
-        resettimer(2000)
       },350)
     }else if(screen3 == true){
       Animated.timing(scaleValue, {
@@ -51,7 +47,6 @@ const Info = () => {
       setTimeout(()=>{
         setscreen3(false)
         setscreen1(true)
-        resettimer(2000)
       },350)
     }
   },timer)
