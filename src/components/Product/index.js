@@ -24,7 +24,9 @@ const Styles = StyleSheet.create({
         marginLeft:30,
         height:220,
         width:350,
-        marginTop:20
+        marginTop:20,
+        shadowOpacity:50,
+        shadowColor:'white'
     },
     Image:{
         height:'100%',

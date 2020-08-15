@@ -29,9 +29,9 @@ const ItemDetails = (props) => {
             <ImageBackground style={Style.Image} borderBottomRightRadius={50} source={{uri: props.item.image}}>
                 <Text onPress={()=>close()} style={{marginTop:'13%',marginLeft:'10%',fontSize:20}}>{`X`}</Text>
             </ImageBackground>
-            <Text style={{fontSize:20, marginLeft: 10, marginTop:-190}}>{props.item.name}</Text>
+            <Text style={{fontSize:20, marginLeft: 10, marginTop:-190, color:'white'}}>{props.item.name}</Text>
             {free == false ? <Text style={Style.Text}>{'\u00A3 '+(price/100).toFixed(2)}</Text>:<Text style={Style.Text}>FREE</Text>}
-            <ScrollView><Text style={{fontSize:15, margin:20, padding:5}}>{props.item.description}</Text></ScrollView>
+            <ScrollView><Text style={{fontSize:15, margin:20, padding:5, color:'white'}}>{props.item.description}</Text></ScrollView>
         </View>
     )
 }
@@ -48,7 +48,8 @@ const Style = StyleSheet.create({
     Page:{
         height:'100%',
         width:'100%',
-        alignItems:'center'
+        alignItems:'center',
+        backgroundColor:'#FF7133'
     },
     Image:{
         width:'100%',
@@ -58,6 +59,14 @@ const Style = StyleSheet.create({
     Text:{
         fontSize:20,
         marginLeft: 10, 
-        marginTop:10
+        marginTop:10,
+        color:'white',
+        borderWidth:1,
+        borderRadius:10,
+        paddingLeft:20,
+        paddingRight:20,
+        paddingTop:10,
+        paddingBottom:10,
+        marginBottom:10
     }
 })

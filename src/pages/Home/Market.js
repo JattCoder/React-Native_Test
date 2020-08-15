@@ -60,10 +60,10 @@ export default Market = (props) => {
     })
 
     return(
-        <View>
+        <View style={{width:'100%',height:'100%',backgroundColor:'#FF7133'}}>
             <View style={Styles.Page}>
                 {category == '' ? <View style={{justifyContent:'center',alignItems:'center',height:'80%',width:'100%'}}>
-                    <Text style={{fontSize:23}}>Categories</Text>
+                    <Text style={{fontSize:23, color:'white'}}>Categories</Text>
                     {data.filter((Item)=>{return check(Item.category) }).map((item)=>{
                         return(
                             <View key={item.id}>
@@ -127,7 +127,7 @@ export default Market = (props) => {
 const Styles = StyleSheet.create({
     Page:{
         marginTop:'15%',
-        width:'100%'
+        width:'100%',
     },
     card:{
         borderRadius:15
@@ -144,8 +144,9 @@ const Styles = StyleSheet.create({
         height:50,
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:'#00a2ed',
-        borderColor:'#002366',
-        borderWidth:3
+        backgroundColor:'#368B8E',
+        borderWidth:0.5,
+        shadowOpacity:50,
+        shadowColor:'white'
     }
 })
