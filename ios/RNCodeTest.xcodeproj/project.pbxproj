@@ -12,6 +12,7 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		25D689FA24E89A4C00765450 /* RnConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D689F824E89A4C00765450 /* RnConfig.m */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -53,6 +54,8 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNCodeTest/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNCodeTest/main.m; sourceTree = "<group>"; };
 		1D4A6749819E1CF0494DFC92 /* Pods-RNCodeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCodeTest.debug.xcconfig"; path = "Target Support Files/Pods-RNCodeTest/Pods-RNCodeTest.debug.xcconfig"; sourceTree = "<group>"; };
+		25D689F824E89A4C00765450 /* RnConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnConfig.m; sourceTree = "<group>"; };
+		25D689F924E89A4C00765450 /* RnConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnConfig.h; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* RNCodeTest-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNCodeTest-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RNCodeTest-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNCodeTest-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		437EBC9ACEEF76E610049346 /* Pods-RNCodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCodeTest.release.xcconfig"; path = "Target Support Files/Pods-RNCodeTest/Pods-RNCodeTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 		13B07FAE1A68108700A75B9A /* RNCodeTest */ = {
 			isa = PBXGroup;
 			children = (
+				25D689F924E89A4C00765450 /* RnConfig.h */,
+				25D689F824E89A4C00765450 /* RnConfig.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -582,6 +587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				25D689FA24E89A4C00765450 /* RnConfig.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,4 +1,4 @@
-#import "RNConfig.h"
+#import "RnConfig.h"
 
 @implementation RNConfig
 
@@ -6,8 +6,13 @@ RCT_EXPORT_MODULE();
 
 - (NSDictionary *)constantsToExport
 {
-  NSString* platform_name = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"PlatformName"];
-  return @{ @"PlatformName": platform_name };
+  NSString* service_key = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"Service Key"];
+  return @{ @"ServiceKey": service_key };
+}
+
++ (BOOL)requiresMainQueueSetupv
+{
+    return NO;
 }
 
 @end
