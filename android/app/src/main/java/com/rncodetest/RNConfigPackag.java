@@ -22,7 +22,7 @@ public class RNConfigPackag implements ReactPackage {
             ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
         //We import the module file here
-        modules.add(new RNConfi(reactContext));
+        modules.add(new RNConfig(reactContext));
 
         return modules;
     }

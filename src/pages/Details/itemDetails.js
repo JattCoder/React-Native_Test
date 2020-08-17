@@ -29,7 +29,7 @@ const ItemDetails = (props) => {
             <ImageBackground style={Style.Image} borderBottomRightRadius={50} source={{uri: props.item.image}}>
                 <Text onPress={()=>close()} style={{marginTop:'13%',marginLeft:'10%',fontSize:20}}>{`X`}</Text>
             </ImageBackground>
-            <Text style={{fontSize:20, marginLeft: 10, marginTop:-190, color:'white'}}>{props.item.name}</Text>
+            <Text style={{fontSize:20, marginLeft: 10, marginTop:-160, color:'white'}}>{props.item.name}</Text>
             {free == false ? <Text style={Style.Text}>{'\u00A3 '+(price/100).toFixed(2)}</Text>:<Text style={Style.Text}>FREE</Text>}
             <ScrollView><Text style={{fontSize:15, margin:20, padding:5, color:'white'}}>{props.item.description}</Text></ScrollView>
         </View>

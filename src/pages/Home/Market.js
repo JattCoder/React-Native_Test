@@ -55,7 +55,6 @@ export default Market = (props) => {
     }
 
     useSelector((state)=>{
-        //e.target.style.animation = 'crescendo 0.3s alternate infinite ease-in';
         if(state.item.name != '') props.navigation.navigate('Details')
     })
 
@@ -80,10 +79,9 @@ export default Market = (props) => {
                             <TouchableOpacity onPress={()=>setcategory('')} style={{marginLeft:'5%',flexDirection:'row'}}>
                                 <Text style={{fontSize:18,color:'#002366'}}>{`< `}</Text>
                                 <Text style={{color:'#002366', fontSize:20}}>{category}</Text>
-                                <Text style={{justifyContent:'center',alignItems:'center',fontSize:20,color:'#00a2ed'}}> - Items</Text>
                             </TouchableOpacity>
                         </View>
-                        <View style={{height:'100%',width:'100%',justifyContent:'center',alignItems:'center',marginTop:'5%'}}>
+                        <View style={{height:'100%',width:'100%',justifyContent:'center',alignItems:'center',marginTop:'2%'}}>
                             <ScrollView style={{width:'100%'}}>
                                 <View>
                                     {data.map((item)=>{
@@ -109,8 +107,7 @@ export default Market = (props) => {
                                                     }}
                                                 >
                                                 <Animated.View key={item.id} style={transformStyle}>
-                                                    <Card key={item.id} item={item} selection={category}
-                                                    onPress={(e)=>console.log('alert, card was pressed')}/>
+                                                    <Card key={item.id} item={item} selection={category}/>
                                                 </Animated.View>
                                                 </TouchableOpacity>: null
                                         )
@@ -126,7 +123,7 @@ export default Market = (props) => {
 
 const Styles = StyleSheet.create({
     Page:{
-        marginTop:'15%',
+        marginTop:'12%',
         width:'100%',
     },
     card:{

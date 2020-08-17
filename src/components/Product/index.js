@@ -1,10 +1,8 @@
-import React,{ useState, useEffect } from 'react'
-import { View, StyleSheet, Text, ImageBackground, ActivityIndicator } from 'react-native'
+import React,{ useState } from 'react'
+import { View, StyleSheet, ImageBackground, ActivityIndicator } from 'react-native'
 import Infobar from './infobar'
 
 export default Product = (props) => {
-    const[free,setfree] = useState(false)
-    const[price,setprice] = useState(0)
     const[imgload,setimgload] = useState(false)
     
     return(
@@ -19,7 +17,6 @@ export default Product = (props) => {
 
 const Styles = StyleSheet.create({
     Card:{
-        justifyContent:'center',
         alignItems:'center',
         marginLeft:30,
         height:220,
