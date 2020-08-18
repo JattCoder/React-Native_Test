@@ -1,17 +1,16 @@
 import React,{ useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Selectitem} from '../../../actions/item/selectitem'
-import { ResetItem } from '../../../actions/item/resetitem'
 import { View, ScrollView, StyleSheet, TouchableOpacity, Text, Animated, Easing } from 'react-native'
 import Card from '../../components/Product'
+import Data from '../../components/data/items'
 
 export default Market = (props) => {
     const [category,setcategory] = useState('')
-    const [anim,setanim] = useState('')
     const dispatch = useDispatch()
-    let data = require('../../../assets/products.json');
     const arr = []
-
+    //console.log(Data.item())
+    let data = require('../../../assets/products.json')
     let scaleValue = new Animated.Value(0);
 
     const cardScale = scaleValue.interpolate({
