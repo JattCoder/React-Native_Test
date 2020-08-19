@@ -1,12 +1,14 @@
 import { ITEMS } from '../actions/items/getitems'
 
-const reducer = (items = [], action) => {
+const clear = []
+
+const items = (items = [], action) => {
     switch(action.type){
         case ITEMS:
-            return { ...items, ...action.payload }
+            return action.payload
         default:
             return items
     }
 }
 
-export default reducer
+export default items

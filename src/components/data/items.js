@@ -1,29 +1,20 @@
 import React,{useEffect} from 'react'
 import { items } from '../../../actions/items/getitems'
-import {connect,useDispatch} from 'react-redux'
+import { file } from '../../../actions/items/fromfile'
+import {useSelector,useDispatch} from 'react-redux'
 
-class Data extends React.Component{
-    
-    item = (props) => {
-        const dispatch = useDispatch()
+export default Items = () => {
+    const dispatch = useDispatch()
+    useSelector((props)=>{
         if(props.method.method == 'File'){
-            console.warn('File')
-            return require('../../../assets/products.json')
+            data = require('../../../assets/products.json')
+            return data
         }else{
-            console.warn('API')
             if(props.items.length == 0){
                 dispatch(items())
+            }else{
+                return props.items
             }
         }
-        if(props.items.length != 0) return props.items
-    }
-
+    })
 }
-
-const mapStateToProps = (state) => ({
-    items: state.items
-})
-
-const conn = connect(mapStateToProps, null)(Data)
-
-export default conn

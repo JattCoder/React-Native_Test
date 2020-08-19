@@ -4,7 +4,7 @@ import items from './items'
 import method from './method'
 
 const rootreducers =  combineReducers({
-  item,items,method
+  method,items,item
 })
 
 export default rootreducers

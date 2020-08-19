@@ -14,7 +14,7 @@ let initialState = {
     category: ""
   }
 
-const reducer = (selecteditem = initialState, action) => {
+const item = (selecteditem = initialState, action) => {
     switch(action.type){
         case SELECT_ITEM:
             return { ...selecteditem, ...action.payload }
@@ -25,4 +25,4 @@ const reducer = (selecteditem = initialState, action) => {
     }
 }
 
-export default reducer
+export default item

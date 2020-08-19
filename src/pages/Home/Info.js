@@ -1,5 +1,4 @@
-import React,{ useState, useEffect } from 'react';
-import {useDispatch} from 'react-redux'
+import React,{ useState } from 'react';
 import { Text, StyleSheet, View, TouchableOpacity, Animated, Easing } from 'react-native';
 
 const Info = () => {
@@ -14,7 +13,6 @@ const Info = () => {
       outputRange: [1, 1.1, 1.2]
   });
   let zoom = { transform: [{ scale: textScale }] };
-  let dispatch = useDispatch()
 
   setTimeout(()=>{
     if(screen1 == true){

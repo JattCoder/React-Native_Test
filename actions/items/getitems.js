@@ -1,6 +1,6 @@
 export const ITEMS = 'ITEMS'
 
-export const items = (item) => {
+export const items = () => {
     return async (dispatch) => { 
         return await fetch('http://localhost:3000/items')
         .then(res => res.json())

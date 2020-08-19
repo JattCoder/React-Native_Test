@@ -1,8 +1,7 @@
 export const METHOD = 'METHOD'
 
-export const method = (meth) => {
-    if (meth == true) selection = 'File'
-    else selection = 'API'
-    return async (dispatch) => { dispatch({type: METHOD, payload: selection})
+export const method = (method) => {
+    return (dispatch) => {
+        return dispatch({type: METHOD, payload: method})
     }
 }
