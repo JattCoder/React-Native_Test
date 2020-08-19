@@ -43,8 +43,6 @@ export default Market = (props) => {
     }
 
     check = (category) => {
-        console.log('Incomming Category...',category)
-        console.log('Length of arr....',arr.length)
         if(arr.includes(category)) return false
         else {
             arr.push(category)
@@ -58,7 +56,6 @@ export default Market = (props) => {
         }else{
             if(state.method == true && received == 'File'){
                 data = state.items
-                console.warn('State Items Length... ',state.items.length)
                 if(data.length == 0){
                     sortedArrOfObjects('')
                 }else{
@@ -66,30 +63,9 @@ export default Market = (props) => {
                 }
             }else if(state.method == false && (received == 'API' || received == '')){
                 data = require('../../../assets/products.json')
-                console.warn('File')
-                console.warn(data)
                 sortedArrOfObjects('File')
             }
-            // if(received == 'File'){
-            //     console.warn('Using API')
-            //     data = state.items
-            //     sortedArrOfObjects('API')
-            // }else if(received == 'API'){
-            //     console.warn('Using File')
-            //     data = require('../../../assets/products.json')
-            //     sortedArrOfObjects('File')
-            // }else if(received == ''){
-            //     data = require('../../../assets/products.json')
-            // }
         }
-        // if(state.items != 0){
-        //     data = state.items
-        //     console.warn('API being Used')
-        // }else{
-        //     data = require('../../../assets/products.json')
-        //     if(data == null)console.warn('File does not exist or Corrupted Data')
-        //     else console.warn('File being Used')
-        // }
     })
 
     return(
